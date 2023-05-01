@@ -2,7 +2,7 @@ export default function About() {
   return (
     <div className="mx-96 w-fit items-center justify-center rounded-lg bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
       <h1 className="mt-4 mb-3 flex justify-center pt-4 font-sans text-4xl font-extrabold">
-        About
+        Abou
       </h1>
       <p className="mx-auto mt-6 flex items-center justify-center px-8 pb-8 font-sans">
         Hi, we are Bonnie and Susan, two besties that were hanging out and
