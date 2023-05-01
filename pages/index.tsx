@@ -41,6 +41,7 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
           />
         )}
         <div className="columns-1 gap-4 sm:columns-2 xl:columns-3 2xl:columns-4">
+          <Link href="/about">
           <div className="after:content relative mb-5 flex h-[520px] flex-col items-center justify-end gap-4 overflow-hidden rounded-lg bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 px-6 pb-16 text-center shadow-highlight after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:shadow-highlight lg:pt-0">
             <div className="absolute inset-0 flex items-start justify-center opacity-100">
               <span className="flex max-h-full max-w-full items-center justify-center">
@@ -63,6 +64,7 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
               treasures.
             </p>
           </div>
+          </Link>
           {images.map(({ id, public_id, format, blurDataUrl }) => (
             <Link
               key={id}
