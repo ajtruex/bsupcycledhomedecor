@@ -1,11 +1,11 @@
-import type { GetStaticProps, NextPage } from 'next'
-import Head from 'next/head'
-import { useRouter } from 'next/router'
-import Carousel from '../../components/Carousel'
-import getResults from '../../utils/cachedImages'
-import cloudinary from '../../utils/cloudinary'
-import getBase64ImageUrl from '../../utils/generateBlurPlaceholder'
-import type { ImageProps } from '../../utils/types'
+import type { GetStaticProps, NextPage } from "next"
+import Head from "next/head"
+import { useRouter } from "next/router"
+import Carousel from "../../components/Carousel"
+import getResults from "../../utils/cachedImages"
+import cloudinary from "../../utils/cloudinary"
+import getBase64ImageUrl from "../../utils/generateBlurPlaceholder"
+import type { ImageProps } from "../../utils/types"
 
 const Home: NextPage = ({ currentPhoto }: { currentPhoto: ImageProps }) => {
   const router = useRouter()
@@ -17,9 +17,7 @@ const Home: NextPage = ({ currentPhoto }: { currentPhoto: ImageProps }) => {
   return (
     <>
       <Head>
-        <title>Next.js Conf 2022 Photos</title>
-        <meta property="og:image" content={currentPhotoUrl} />
-        <meta name="twitter:image" content={currentPhotoUrl} />
+        <title>BS Upcycled Home Decor</title>
       </Head>
       <main className="mx-auto max-w-[1960px] p-4">
         <Carousel currentPhoto={currentPhoto} index={index} />
@@ -61,7 +59,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 export async function getStaticPaths() {
   const results = await cloudinary.v2.search
     .expression(`folder:${process.env.CLOUDINARY_FOLDER}/*`)
-    .sort_by('public_id', 'desc')
+    .sort_by("public_id", "desc")
     .max_results(400)
     .execute()
 
