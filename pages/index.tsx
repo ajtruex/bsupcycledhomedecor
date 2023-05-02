@@ -6,6 +6,7 @@ import { useRouter } from "next/router"
 import { useEffect, useRef } from "react"
 
 import Modal from "../components/Modal"
+import NavBar from "../components/NavBar"
 import cloudinary from "../utils/cloudinary"
 import getBase64ImageUrl from "../utils/generateBlurPlaceholder"
 import type { ImageProps } from "../utils/types"
@@ -32,6 +33,7 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
         <title>BS Upcycled Home Decor</title>
       </Head>
       <main className="mx-auto max-w-[1960px] p-4">
+        <NavBar />
         {photoId && (
           <Modal
             images={images}
@@ -42,28 +44,28 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
         )}
         <div className="columns-1 gap-4 sm:columns-2 xl:columns-3 2xl:columns-4">
           <Link href="/about">
-          <div className="after:content relative mb-5 flex h-[520px] flex-col items-center justify-end gap-4 overflow-hidden rounded-lg bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 px-6 pb-16 text-center shadow-highlight after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:shadow-highlight lg:pt-0">
-            <div className="absolute inset-0 flex items-start justify-center opacity-100">
-              <span className="flex max-h-full max-w-full items-center justify-center">
-                <Image
-                  src="https://res.cloudinary.com/ajtruex/image/upload/c_scale,w_620/v1653124205/bslogo-2.png"
-                  alt=""
-                  width={620}
-                  height={358}
-                ></Image>
-              </span>
-            </div>
+            <div className="after:content relative mb-5 flex h-[520px] flex-col items-center justify-end gap-4 overflow-hidden rounded-lg bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 px-6 pb-16 text-center shadow-highlight after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:shadow-highlight lg:pt-0">
+              <div className="absolute inset-0 flex items-start justify-center opacity-100">
+                <span className="flex max-h-full max-w-full items-center justify-center">
+                  <Image
+                    src="https://res.cloudinary.com/ajtruex/image/upload/c_scale,w_620/v1653124205/bslogo-2.png"
+                    alt=""
+                    width={620}
+                    height={358}
+                  ></Image>
+                </span>
+              </div>
 
-            <h1 className="font-sans text-xl font-bold uppercase">
-              BS Upcycled Home Decor
-            </h1>
-            <p className="max-w-[40ch] text-white/75 sm:max-w-[32ch]">
-              Hi, we are Bonnie and Susan, two besties that were hanging out and
-              trying to make the most of it during Covid. Bonnie introduced
-              Susan to her love of crafting and upcycling old items into new
-              treasures.
-            </p>
-          </div>
+              <h1 className="font-sans text-xl font-bold uppercase">
+                BS Upcycled Home Decor
+              </h1>
+              <p className="max-w-[40ch] text-white/75 sm:max-w-[32ch]">
+                Hi, we are Bonnie and Susan, two besties that were hanging out
+                and trying to make the most of it during Covid. Bonnie
+                introduced Susan to her love of crafting and upcycling old items
+                into new treasures.
+              </p>
+            </div>
           </Link>
           {images.map(({ id, public_id, format, blurDataUrl }) => (
             <Link
