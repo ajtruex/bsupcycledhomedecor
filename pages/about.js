@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <div className="mx-1 w-fit items-center justify-center rounded-lg bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 md:mx-10 lg:mx-96">
+    <div className="mx-1 w-fit items-center justify-center rounded-lg bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 md:mx-10 lg:mx-72 xl:mx-96">
       <h1 className="mb-3 mt-4 flex justify-center pt-4 font-sans text-4xl font-extrabold">
         About
       </h1>
