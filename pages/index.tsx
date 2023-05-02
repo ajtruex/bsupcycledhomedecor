@@ -32,8 +32,8 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
       <Head>
         <title>BS Upcycled Home Decor</title>
       </Head>
+      <NavBar />
       <main className="mx-auto max-w-[1960px] p-4">
-        <NavBar />
         {photoId && (
           <Modal
             images={images}

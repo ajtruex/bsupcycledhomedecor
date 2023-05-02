@@ -6,20 +6,14 @@ export default function NavBar() {
   const [navbar, setNavbar] = useState(false)
   return (
     <div>
-      <Head>
-        <title>Create Next Responsive Navbar With Tailwind CSS</title>
-        <meta
-          name="description"
-          content="Create Next JS Responsive Menu with Tailwind CSS"
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <nav className="w-full bg-gray-800 shadow">
-        <div className="mx-auto justify-between px-4 md:flex md:items-center md:px-8 lg:max-w-7xl">
+      <nav className="w-full bg-black shadow">
+        <div className="lg:max-w-screen-3xl mx-auto justify-between px-4 md:flex md:items-center md:px-8">
           <div>
-            <div className="flex items-center justify-between py-3 md:block md:py-5">
+            <div className="flex py-3 md:block md:py-5">
               <a href="#">
-                <h2 className="text-2xl font-bold text-white">NEXT JS</h2>
+                <h2 className="text-2xl font-bold text-white">
+                  BS Upcycled Home Decor
+                </h2>
               </a>
               <div className="md:hidden">
                 <button
@@ -67,35 +61,16 @@ export default function NavBar() {
             >
               <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
                 <li className="text-white">
-                  <Link href="/">
-                    <a>Home</a>
-                  </Link>
+                  <Link href="/">Home</Link>
                 </li>
                 <li className="text-white">
-                  <Link href="/blogs">
-                    <a>Blogs</a>
-                  </Link>
-                </li>
-                <li className="text-white">
-                  <Link href="/about">
-                    <a>About US</a>
-                  </Link>
-                </li>
-                <li className="text-white">
-                  <Link href="/contact">
-                    <a>Contact US</a>
-                  </Link>
+                  <Link href="/about">About</Link>
                 </li>
               </ul>
             </div>
           </div>
         </div>
       </nav>
-      <div className="mt-8 flex items-center justify-center">
-        <h1 className="text-2xl font-bold text-purple-500">
-          Create Responsive Navbar Menu in Next js with Tailwind CSS
-        </h1>
-      </div>
     </div>
   )
 }
