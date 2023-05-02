@@ -19,7 +19,7 @@ export default function NavBar() {
                 src={logo}
                 alt=""
                 height={72}
-                className="-my-3 mr-1 pr-3"
+                className="-my-3 mr-1 pr-3 sm:hidden xs:hidden"
               />
               <h2 className="flex text-2xl font-bold text-white">
                 BS Upcycled Home Decor
