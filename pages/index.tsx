@@ -6,7 +6,7 @@ import { useRouter } from "next/router"
 import { useEffect, useRef } from "react"
 
 import Modal from "../components/Modal"
-import NavBar from "../components/NavBar"
+
 import cloudinary from "../utils/cloudinary"
 import getBase64ImageUrl from "../utils/generateBlurPlaceholder"
 import type { ImageProps } from "../utils/types"
@@ -32,7 +32,7 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
       <Head>
         <title>BS Upcycled Home Decor</title>
       </Head>
-      <NavBar />
+
       <main className="mx-auto max-w-[1960px] p-4">
         {photoId && (
           <Modal
