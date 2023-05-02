@@ -18,7 +18,7 @@ module.exports = {
         narrow: { raw: "(max-aspect-ratio: 3 / 2)" },
         wide: { raw: "(min-aspect-ratio: 3 / 2)" },
         "taller-than-854": { raw: "(min-height: 854px)" },
-        xs: "0px",
+        xs: "240px",
       },
       fontFamily: {
         sans: ["var(--font-inter)", ...fontFamily.sans],

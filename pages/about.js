@@ -1,10 +1,10 @@
 export default function About() {
   return (
-    <div className="mx-96 w-fit items-center justify-center rounded-lg bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+    <div className="mx-1 w-fit items-center justify-center rounded-lg bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 md:mx-10 lg:mx-96">
       <h1 className="mb-3 mt-4 flex justify-center pt-4 font-sans text-4xl font-extrabold">
         About
       </h1>
-      <p className="mx-auto mt-6 flex items-center justify-center px-8 pb-8 font-sans">
+      <p className="mx-auto mt-6 flex items-center justify-center px-2 pb-8 font-sans md:px-8 lg:px-8">
         Hi, we are Bonnie and Susan, two besties that were hanging out and
         trying to make the most of it during Covid. Bonnie introduced Susan to
         her love of crafting and upcycling old items into new treasures. Soon
